@@ -1,0 +1,286 @@
+1)Boite à Moustache:
+Nous pouvons avoir une idée de la tendance centrale des valeurs de chaque boite en observant la position de la médiane. Si la médiane n’est pas au centre, on peut juger de la symétrie de la distribution (aplatissement et asymétrie)(postive skewness and negative skewness).
+Par la longueur de la boite, il est possible d’estimer la variabilité des valeurs pour chaque sous-groupe.
+Enfin, la longueur des « moustaches » donne une idée de la taille de la queue de la distribution.
+
+1.1)Standard deviation 
+A low standard deviation indicates that the data points tend to be very close to the mean;
+a high standard deviation indicates that the data points are spread out over a large range of values.
+
+
+
+2)Learn Exploratory analysis with Python:
+https://www.analyticsvidhya.com/blog/2016/01/complete-tutorial-learn-data-science-python-scratch-2/
+
+3)Cross-validation:
+Cross-validation, it’s a model validation techniques for assessing how the results of a statistical analysis (model) will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice.
+Cross Validation allows us to compare different machine learning methods and get sense of how well they will work in practice.
+
+when we use cross-validation with classification problem it is recommended that you use stratified sampling to create the folds.
+
+Select features with cross validation 
+rse is something we wanna minimize 
+
+
+
+4)Interpreting the Summary of a Logistic Regression:
+Recall is the ability to identify the number of samples that would really count positive for a specific attribute.
+(taux d'erreur)
+prescision : taux de reussite 
+F1-score:An F1-score means a statistical measure of the accuracy of a test or an individual. It is composed of two primary attributes, viz. precision and recall, both calculated as percentages and combined as harmonic mean to assign a single number, easy for comprehension.
+F1 = (recall+precision)/2
+
+
+
+
+
+5)Decision Tree:
+The value line in each box is telling you how many samples at that node fall into each category, in order. That's why, in each box, the numbers in value add up to the number shown in sample. For instance, in your red box, 91+212+113=416. So this means if you reach this node, there were 91 data points in category 1, 212 in category 2, and 113 in category 3.
+To classify an instance, we should answer the question at each node. For example, Is sex<=0.5? (are we talking about a woman?). If the answer is yes, you go to the left child node in the tree; otherwise you go to the right child node. You keep answering questions (was she in the third class?, was she in the first class?, and was she below 13 years old?), until you reach a leaf. When you are there, the prediction corresponds to the target class that has most instances.
+
+
+
+
+6)Random Forest:
+Random forest is like bootstrapping algorithm with Decision tree (CART) model. Say, we have 1000 observation in the complete population with 10 variables. Random forest tries to build multiple CART model with different sample and different initial variables. For instance, it will take a random sample of 100 observation and 5 randomly chosen initial variables to build a CART model. It will repeat the process (say) 10 times and then make a final prediction on each observation. Final prediction is a function of each prediction. This final prediction can simply be the mean of each prediction.
+
+The algorithm can be used in both classification and regression problems.
+Deep decision trees may suffer from overfitting, but random forests prevents overfitting by creating trees on random subsets.
+
+7)p-value and R-square:
+a)low R-square and low p-value (p-value <= 0.05)
+==>means that your model doesn't explain much of variation of the data but it is significant (better than not having a model)
+
+b)low R-square and high p-value (p-value > 0.05)
+==>means that your model doesn't explain much of variation of the data and it is not significant (worst scenario)
+
+c)high R-square and low p-value 
+==>means your model explains a lot of variation within the data and is significant (best scenario)
+
+d)high R-square and high p-value
+
+8)K-nearest neighbors:
+-->KNN can be used for both classification and regression problems. The algorithm uses 'feature similarity' to predict values of any new data points. This means that the new point is assigned a value based on how closely it resembles the points in the training set.
+
+9)Ridge, lasso regression and elastic net regression:
+
+**1-->Ridge Regression
+The main idea behind Ridge Regression is to find a new line that doesn't fit the Training Data as well --> in other words we introduce a small amount of bias into how the new line is fit to the data
+
+an OLS model with some bias is better at prediction than the pure OLS model. 
+we could understand that ridge regression is basically a linear regression with penalty. Through the demonstration, we confirmed that there is no equation for finding the best lambda. Thus, we needed to iterate a series of values and evaluate prediction performances with MSE. By doing so, we found that the ridge regression model performs better than the plain linear regression model for prediction.
+OLS simply finds the best fit for given data
+Features have different contributions to RSS
+Ridge regression gives a bias to important features
+MSE or R-square can be used to find the best lambda
+
+ GridSearchCV allow us to automatically perform 5-fold cross-validation with a range of different regularization parameters in order to find the optimal value of alpha.
+
+**2-->Lasso Regression 
+It's the same as Ridge regression, the big difference between Ridge and Lasso Regression is that Ridge Regression can shrink the slope asymptotically close to 0 while Lasso Regression can shrink the slope all the way to 0.
+
+But the big difference is that Lasso Regression can exclude useless variables from equations this make the final equation simpler and easier to interpret. 
+
+
+When we use Ridge and Lasso? 
+Ridge regression works best when most of the variables in your model are useful
+
+The hybrid Elastic-Net Regression is especially good at dealing with situation when there are correlation between parameters
+
+Lasso Regression tends to pick just one of the correlated terms and eliminate the others 
+Ridge Regression tends to shrink all of the parameters for the correlated variables together
+
+10)SVM or Support Vector Machine is a linear model for classification and regression problems. It can solve linear and non-linear problems and work well for many practical problems. The idea of SVM is simple: The algorithm creates a line or a hyperplane which separates the data into classes.
+
+
+11)t-test: The t test (also called Student’s T Test) compares two averages (means) and tells you if they are different from each other. The t test also tells you how significant the differences are; In other words it lets you know if those differences could have happened by chance.
+
+12)Analysis of variance (ANOVA) is a collection of statistical models and their associated estimation procedures (such as the "variation" among and between groups) used to analyze the differences among group means in a sample.
+
+Practical usage in data analysis and machine learning:
+ANOVA used as Feature selection in classification problem. In this context we use F-Score to rank the features (and choose “k best features”) 
+
+H0: μ1 = μ2 = μ3 ... = μk
+H1: Means are not all equal.
+
+13)Bias and Variance:
+Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data.
+
+Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data.
+
+14)When we use Feature Scaling?
+Normalization makes sure that all of your data looks and reads the same way across all records. 
+Here's 3 reason why it's important to normalize your data:
+----->Normalizing your data before matching and merging duplicates will make it easier to
+	  find the duplicates.
+-----> By standardizing your data, and using a single organizational method with proper 	   capitalization, your data will be significantly easier to sort through. Not to 		   mention, your sales and marketing teams will save valuable time as they won’t have 		 to spend time sorting the data, and instead actually using it. 
+
+15)Adaboost:
+ Boosting algorithms combine multiple low accuracy(or weak) models to create a high accuracy(or strong) models.
+ 	Ensemble methods can:
+ 		--> Decrease variance using bagging approach
+ 		--> Decrease bias using a boosting approach
+ 		--> Improve predictions using stacking approach.
+
+ 	Advantages:
+		-->It iteratively corrects the mistakes of the weak classifier.
+		-->Improves accuracy by combining weak learners.
+		-->You can use many base classifiers with AdaBoost.
+		-->AdaBoost is not prone to overfitting.
+
+ 	Disadvantages:
+ 		-->Sensitive to noise data.
+ 		-->It is highly affected by outliers because it tries to fit each point perfectly.
+ 		-->AdaBoost is slower compared to XGBoost.
+
+16)XGBoost:
+	If you plan to use XGBoost on a dataset which has categorical features you may want to consider applying some encoding (like one-hot encoding) to such features before training the model. Also, if you have some missing values such as NA in the dataset you may or may not do a separate treatment for them, because XGBoost is capable of handling missing values internally. 
+
+17)Gradient Boosting:
+	Gradient Boosting: GBT build trees one at a time, where each new tree helps to correct errors made by previously trained tree.
+
+	Advantages:
+		--> GBM can be used to solve almost all objective function that we can write gradient out.
+
+	Disadvantages:
+		-->More sensitive to overfitting if the data is noisy.
+		-->Training generally takes longer because of the fact that trees are built sequentially.
+		-->Harder to tune than RF. There are typically three parameters: number of trees, depth
+		   of trees and learning rate, and the each tree built is generally shallow.   
+
+18)PCA:
+	Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables (entities each of which takes on various numerical values) into a set of values of linearly uncorrelated variables called principal components.
+
+	Used for:
+		-->Data Visualization
+		-->Speed-up Machine Learning Algorithms
+    
+    Advantages:
+    	-->Removes Correlated Features
+    	-->Improves Algorithm Performance
+    	-->Reduces Overfitting
+    	-->Improves Visualization
+    
+    Disadvantages:
+    	-->Independent variables become less interpretable
+    	-->Data standardization is must before PCA
+    	-->Information Loss
+
+19)Polynomial Regression 
+	In statistics, polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y |x), and has been used to describe nonlinear phenomena.
+
+	Advantages:
+		-->Polynomial provides the best approximation of the relationship between the dependent 
+		   and independent variable.
+		-->A Broad range of function can be fit under it.
+		-->Polynomial basically fits a wide range of curvature.
+
+	Disadvantages:
+		-->The presence of one or two outliers in the data can seriously affect the results of 
+		   the nonlinear analysis.
+		-->These are too sensitive to the outliers.
+		-->In addition, there are unfortunately fewer model validation tools for the detection of 
+		   outliers in nonlinear regression than there are for linear regression.
+
+20)Structured Thinking:
+	-->Enhance structured thinking:
+		Create a Scope of Work document
+			Background
+			Problem statement
+			Customers, Sponsor and stakeholders
+			In scope and out of scope areas (please note that both are equally important).
+
+		Create presentation and lay out the analysis without touching the data:	
+
+		
+
+21)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+22)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+23)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+24)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+25)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+26)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+27)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+28)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+29)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->
+30)
+	Advantages:
+		-->
+		-->
+		-->
+
+	Disadvantages:
+		-->
+		-->

@@ -1,0 +1,10 @@
+1)Horsepower is nothing but a unit of power that measures how forceful the engine of a car is. How many kilometers your vehicle can reach in its total lifespan is computed with horsepower. All in all it tells the running capacity of your vehicle.
+
+Horsepower n’est rien d’autre qu’une unité de puissance qui mesure la force du moteur d’une voiture. Combien de kilomètres votre véhicule peut atteindre dans sa durée de vie totale est calculée avec la puissance. Dans l’ensemble, il indique la capacité de votre véhicule.
+
+2)The size of an engine is measured in cubic centimetres (cc) and refers to the total volume of air and fuel that’s pushed through the engine by its cylinders. 
+ 		
+La taille d’un moteur est mesurée en centimètres cubes (cc) et se réfère au volume total d’air et de carburant qui est poussé à travers le moteur par ses cylindres.
+
+	
+3)curbweight Le poids à vide de votre véhicule est le poids de la voiture avec tout l’équipement et les commodités standard, mais sans passagers, cargaison ou tout autre article chargé séparément à l’intérieur.
